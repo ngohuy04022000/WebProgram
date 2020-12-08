@@ -1,0 +1,237 @@
+.header{
+    height: 70px;
+    background-image: linear-gradient(0, rgba(168, 211, 224, 0.5), rgba(3, 88, 36, 0.5));
+    background-color: #5c8465;
+    width: 100%;
+}
+.header__navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+}
+.header__navbar--logo{
+    height: 102px;
+    width: 100px;
+    background-color:  rgb(236, 234, 234);
+    border: var(--white-color--);
+    border-top: 10px solid rgb(236, 234, 234);
+    border-bottom: 10px solid rgb(236, 234, 234);
+    border-left: 10px solid rgb(236, 234, 234);
+    border-right: 10px solid rgb(236, 234, 234);
+    margin-top: 10px;
+}
+.header__navbar--logo:hover{
+    background-color: rgb(200, 240, 223);
+}
+.header__navbar-list{
+    display: flex;
+    text-decoration: none;
+    color: rgb(236, 234, 234);
+    padding-left: 0;
+
+}
+.header__login-search{
+    display: flex;
+    text-decoration: none;
+    color: rgb(236, 234, 234);
+    font-size: 2rem;
+    margin-top: 16px;
+}
+.header__item{
+    margin-left: 26px;
+    list-style: none;
+    font-size:2rem;
+    display: inline;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-top: 20px;
+}
+.item:hover{
+    color: rgba(255,255, 255,0.5);
+}
+.header__item--search{
+    height: 40px;
+    margin-top: 16px;
+    width: 250px;
+}
+.color{
+    background-color:  rgb(125, 168, 125);
+}
+.header__item-login{
+    display: inline-flex;
+    margin-right: 0px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.header__item-search{
+    width: 250px;
+    height: 40px;
+    border-radius: 3px;
+    border-color: var(--white-color--);
+}
+.item{
+    color: #edf8ef;
+    text-decoration: none;
+}
+.search{
+    margin-top: 10px;
+    color: rgb(156, 196, 156);
+    margin-left: 10px;
+}
+.icon-search{
+    background-color: rgb(252, 252, 252);
+    width: 38px;
+    height: 38px;
+    margin-top: 1px;
+    border-radius: 3px;
+}
+/* danh muc*/
+.header_danhmuC{
+    text-decoration: none;
+    
+    
+}
+.danhmuc-theloai{
+    position: absolute;
+    background-color:  rgb(125, 168, 125);
+    width: 600px;
+    margin-top: 8px;
+    margin-left: 26px;
+    animation: hienthi ease-out 0.2s;
+    transform-origin: 10% top;
+    display: none;
+}
+.item_loaidanhmuc{
+    height: 40px;
+    border-left: 0px;
+    text-decoration: none;
+    color: #edf8ef;
+    border: 10px;
+    border-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+
+}
+.danhmuc-list{
+    list-style: none;
+    border-left: 0px;
+}
+.danhmuc-list li{
+    border-bottom: 1px solid rgb(154, 184, 154);
+
+}
+.item_dm{
+    border-left: 0;
+    width: 180px;
+    display:inline-flex;
+    text-align: center;
+}
+.item_dm:hover{
+    background-color:rgba(16, 73, 21, 0.5) ;
+}
+@keyframes hienthi{
+    from{
+        opacity: 0;
+        transform: scale(0.8);
+
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.danhmuc_list:hover .danhmuc-theloai{
+    display: block;
+}
+.theloai_list:hover .danhmuc-theloai{
+    display:  block;
+}
+.theloai{
+    margin-left: 170.5px;
+}
+.anhnen{
+    height: 60px;
+    background-image: linear-gradient(0, rgba(182, 225, 240, 0.5), rgba(11, 100, 74, 0.5));
+}
+/*thân */
+.header__phanthan{
+    height:2000px;
+    background-image: url("https://truyencv.com/templates/truyencv-green/assets/images/body-bg-tl.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+/*đăng nhập - đăng ký*/
+.dk{
+    display: none;
+}
+.dn{
+    display: none ;
+}
+/*phần thân*/
+.header__decu{
+    width: 80%;
+    background-color: rgba(241, 250, 248,0.6);
+    margin-left:10% ;
+    z-index: 1;
+    display: inline-flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+.phandem{
+    width: 100%;
+    height: 350px;
+}
+.btv_decu{
+    margin-top: 20px;
+    margin-left: 20px;  
+    width: 25%;
+}
+.header-title{
+    font-size: 3rem;
+    font-weight: 500;   
+    margin-left: 50px;
+}
+.btv_decu-img{
+    margin-top: 10px;
+    text-align: center;
+}
+.btv_decu-tua{
+    font-size: 2.5rem;
+    text-align: center;
+}
+.btv_decu-chitiet{
+    font-size: 2rem;
+    text-align: center;
+}
+.header-topthinhhanh{
+    width: 370px;
+    margin-top: 20px;
+    width: 80%;
+    border-left: 1px solid rgb(92, 161, 141);
+}
+.header-topthinhhanh-list{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.header-topthinhhanh-item{
+    margin-top: 10px;
+    font-size: 2rem;
+    height: 30px;
+    text-align: center;
+}
+.vach{
+    margin-top: 12px;
+}
+.dangkytaikhoan{
+    margin-top: 3px;
+}
+.dangkytaikhoan:focus ~ .dk .lopphu{
+    display: block;
+}
+.dangnhaptaikhoan:focus ~ .dn .lopphu{
+    display: none;
+}
