@@ -1,0 +1,343 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+}
+*{
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+}
+.grid{
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.tieude_img{
+    border-radius: 5px;
+}
+.app{
+    text-align: center;
+    background-color: rgb(161, 193, 219);
+}
+.thanhchucnang{
+    display: inline-flex;
+    justify-content: space-between;
+    height: 44px;
+    background-color: #075d88;
+    font-size: 1.5rem;
+    width: 1000px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.chucnang-tieude{
+    color: #fff;
+}
+.chucnang{
+margin-top: 14px;
+margin-left:0px;
+}
+.gthieu{
+    width: 104px;
+}
+
+.gioithieu li{
+    display: flex;
+    width:240px;
+    color: #fff;
+    background-color: #075d88;
+    margin-left: -40px ;
+    font-size: 1.45rem;
+    height: 30px;
+    width: 190px;
+    padding-top: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+    margin-top: -5px;
+}
+
+.giothieuthuvien:hover{
+    background-color: rgb(155, 153, 214);
+    color: #333;
+    border-radius: 5px;
+ }
+ .tamnhin:hover{
+    background-color: rgb(155, 153, 214);
+    color: #333;
+    border-radius: 5px;
+ }
+ .chucnang-nhiemvu:hover{
+    background-color: rgb(155, 153, 214);
+    color: #333;
+    border-radius: 5px;
+ }
+ .chatluong:hover{
+    background-color: rgb(155, 153, 214);
+    color: #333;
+    border-radius: 5px;
+ }
+ .chinhsach:hover{
+    background-color: rgb(155, 153, 214);
+    color: #333;
+    border-radius: 5px;
+ }
+ .quymothuvien:hover{
+    background-color: rgb(155, 153, 214);
+    color: #333;
+    border-radius: 5px;
+ }
+ .danhsachcanbo:hover{
+    background-color: rgb(155, 153, 214);
+    color: #333;
+    border-radius: 5px;
+ }
+ .gthieu:hover .gioithieu{
+     display: block;
+     animation: hienthi ease-out 0.2s;
+     transform-origin: 10% top;
+ }
+ .chucnang:hover{
+     font-size: 1.6rem;
+ }
+ .gioithieu{
+     display: none;
+     z-index: 2;
+     position: relative; 
+}
+ }
+ @keyframes hienthi{
+    from{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+ }
+ .tracuu li{
+    display: flex;
+    width:240px;
+    color: #fff;
+    background-color: #075d88;
+    font-size: 1.45rem;
+    height: 30px;
+    width: 190px;
+    padding-top: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+    margin-left: 80px;
+    margin-top: -5px;
+ }
+ .huongdantracuu:hover{
+    background-color: rgb(155, 153, 214);
+    color: #333;
+    border-radius: 5px;
+ }
+ .tracuuOPAC:hover{
+    background-color: rgb(155, 153, 214);
+    color: #333;
+    border-radius: 5px;
+ }
+ .tracuu{
+     display:  none;
+     z-index: 2;
+     position: relative; 
+ }
+ .tracuu-title:hover .tracuu{
+    display: block;
+    animation: hienthi ease-out 0.2s;
+    transform-origin: 10% top;
+ }
+ .tainguyen li{
+    display: flex;
+    width:240px;
+    color: #fff;
+    background-color: #075d88;
+    font-size: 1.45rem;
+    height: 30px;
+    width: 190px;
+    padding-top: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+    margin-left: 50px;
+    margin-top: -5px;
+    z-index: 2;
+     position: relative; 
+ }
+ .tainguyen{
+     display: none;
+     z-index: 2;
+    position: relative; 
+ }
+ .tainguyen-title:hover .tainguyen{
+    display: block;
+    animation: hienthi ease-out 0.2s;
+    transform-origin: 10% top;
+ }
+ .search{
+     display: inline-flex;
+    
+ }
+ .phanthan{
+    
+
+ }
+ .header__login-search{
+    display:flex;
+    color: rgb(236, 234, 234);
+    font-size: 3rem;
+    list-style: none;
+    justify-content: space-between;
+    width: 1000px;
+    background-color: rgb(222, 230, 240);
+    padding-left: 0;
+    border-radius:4px ;
+    margin: 0px;
+}
+.header__item-search{
+    font-size: 20px;
+}
+.icon-search{
+    font-size: 20px;
+}
+.search{
+
+}
+.dangnhaptaikhoan{
+    text-decoration: none;
+    background-color: #379ccf;
+    border-radius: 5px;
+    color: #fff;
+}
+.phanthan{
+    display: inline-flex;
+    width: 1000px;
+    justify-content: space-between;
+    
+}
+.theloaisach{
+    background-color: #096a9b;
+    border-radius: 6px;
+    width: 200px;
+    color: #fff;
+    
+}
+.theloaisach ul{
+    
+    list-style: none;
+}
+.listdanhsach{
+    background-color: bisque;
+    border-radius: 6px;
+    width: 600px;
+}
+.huongdan-chitiet{
+    background-color:#fff;
+    border-radius: 6px;
+    width: 200px;
+    border-right: 2px solid #075d88 ;
+}
+.title-list{
+    font-size: 1.7rem;
+    margin-left: -10px;
+}
+.list-dieucanbiet{
+    list-style: none;
+}
+.loaisach{
+    text-decoration: none;
+    font-size: 1.4rem;
+    margin-top: 50px;
+    display: flex;
+    margin-top: 0px;
+    margin-left: -20px;
+    padding: 6px;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+.sachnoibat-title{
+    display: flex;
+    font-size: 2rem;
+    margin: 10px 0 0 10px;
+    color: #333;
+    border-bottom: 1px solid;
+}
+.danhsachsachnoibat-h1{
+    display: inline-flex;
+    justify-content: space-between;
+}
+.bia1{
+    width: 40%;
+    margin: 30px;
+    cursor: pointer;
+}
+.tuasach{
+    font-size: 1.52rem;
+    margin-top: 5px;
+    display: flex;
+    text-align: center ;
+}
+.danhsach{
+    border-top: 2px solid #fff;
+}
+.danhsach-title{
+    font-size: 2rem;
+    border-bottom: 2px solid #333;
+    display: flex;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.danhsachsachnoibat-h2{
+    display: inline-flex;
+    justify-content: space-between;
+}
+.img-sach{
+    height: 180px
+
+}
+.logo{
+    width: 100%;
+}
+.nhungdieucanbiet{
+    font-size: 2rem;
+    display: flex;
+    margin: 10px;
+    border-bottom: 2px solid #333;
+}
+.dieucanbiet{
+    display: flex;
+    font-size: 1.5rem;
+    height: 60px;    
+    border-bottom: 1px solid #333;
+}
+.list-dieucanbiet{
+    padding: 0;
+    cursor: pointer;
+
+}
+.logo-end{
+    border-radius: 6px;
+}
+.ketthuc{
+    display: inline-flex;
+    justify-content: space-between;
+    background-color: #075d88 ;
+    width: 1000px;
+    border-radius: 6px;
+
+}
+.end{
+    margin: 40px;
+    font-size: 2rem;
+    color: #fff;
+}
+.diachi{
+    color: #fff;
+    border: 30px;
+    margin-top: 70px;
+    margin-left: -850px;
+    font-size: 1.2rem;
+}

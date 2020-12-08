@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./icon/fontawesome-free-5.15.1-web/css/all.min.css">
+    <title>Quản lý nhân sự</title>
+</head>
+<body>
+    <div class="nhanvien">
+        <header class="header">
+            <div class="grid">
+                <div class="title">
+                    <img src="./img/unnamed.png" alt="" class="logo">
+                    <span class="tuade">Quản lý nhân sự thư viện</span>
+                </div> 
+                <div class="body">
+                    <div class="tuadedanhsach">
+                        <h2 class="title-tuadedanhsach">Quản lý nhân sự</h2>
+                        <ul>
+                            <li class="listdanhmuc"> <span class="danhmuc">Quản lý sách</span></li>
+                            <li class="listdanhmuc"> <span class="danhmuc">Quản lý thể loại</span></li>
+                            <li class="listdanhmuc"> <span class="danhmuc">Quản lý nhân viên</span></li>
+                            <li class="listdanhmuc"> <span class="danhmuc">Quản lý độc giả</span></li>
+                            <li class="listdanhmuc"> <span class="danhmuc">Quản lý mượn trả</span></li>
+                        </ul>
+                    </div>
+                    <div class="danhsach">
+                        <div class="header__icon-search">
+                            <input class="header__item-search" type="text" name="txtKeyword" id="txtKeyword" value="" placeholder="Tên nhân viên ..." class="form-control" autocomplete="off">
+                            <a href="" class="icon-search"><i class="fas fa-search search"></i></a>
+                        </div>
+                        <div class="title-danhsach">
+                            <span class="title-danhsach-item">Danh sách</span>
+                            <div class="">
+                                <button class="btn">
+                                    <i class="fas fa-folder-plus"></i>
+                                </button>
+                                <button class=btn>
+                                    <i class="far fa-edit"></i>
+                                </button>
+                                <button class="btn">
+                                    <i class="far fa-trash-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="bangdanhsach">
+                        <div class="quanlysach-list">  
+                            <table border="quanlysach">
+                                <tr>
+                                    <td>STT</td>
+                                    <td>Mã sách</td>
+                                    <td>Tên sách</td>
+                                    <td>Tác giả</td>
+                                    <td>Năm xuất bản</td>
+                                    <td>Nhà xuất bản</td>
+                                    <td>Trị giá</td>
+                                    <td>Giá mượn-Ngày</td>
+                                    <td>Mã nhân viên</td>
+                                    <td>Mã thể loại</td>
+                                    <td>Sẵn sàng</td>
+                                    <td>Mã tình trạng</td>
+                                    <td>Ngày nhập</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="quanlytheloai-list">
+                            <table border="quanlytheloai">
+                                <tr>
+                                    <td>STT</td>
+                                    <td>Mã thể loại</td>
+                                    <td>Tên thể loại</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="quanlysnhanvien-list">
+                            <table border="quanlynhanvien">
+                                <tr>
+                                    <td>STT</td>
+                                    <td>Mã nhân viên</td>
+                                    <td>Họ và tên nhân viên</td>
+                                    <td>Ngày sinh</td>
+                                    <td>Địa chỉ</td>
+                                    <td>Điện thoại</td>
+                                    <td>Lương</td>
+                                    <td>Mã bộ phận</td>
+                                    <td>Mã chức vụ</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="quanlydocgia-list">
+                            <table border="docgia">
+                                <tr>
+                                    <td>STT</td>
+                                    <td>Mã độc giả</td>
+                                    <td>Họ và tên độc giả</td>
+                                    <td>Ngày sinh</td>
+                                    <td>Địa chỉ</td>
+                                    <td>Email</td>
+                                    <td>Ngày lập thẻ</td>
+                                    <td>Ngày hết hạn</td>
+                                    <td>Mã nhân viên</td>
+                                    <td>Tiền nợ</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="quanlymuontrasach-list">
+                            <table border="quanlymuontra">
+                                <tr>
+                                    <td>STT</td>
+                                    <td>Mã phiếu mượn</td>
+                                    <td>Ngày mượn</td>
+                                    <td>Mã đọc giả</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        </div>   
+                    </div>
+                </div>
+                <div class="ketthuc">
+                    <div class="thongtintruong">
+                        <span class="admin-end">Thư viện trường đại học sư phạm kỹ thuật TP. HCM         </span>
+                        <span class="admin-diachi">Số 1-3, Võ Văn Ngân, Thủ Đức, TP.HCM</span>
+                    </div>
+                        <img src="./img/banner (1).jpg" alt="" class="logo-end">
+                    </div>               
+            </div>
+        </header>
+        </div>
+    </div>
+</body>
+</html>
