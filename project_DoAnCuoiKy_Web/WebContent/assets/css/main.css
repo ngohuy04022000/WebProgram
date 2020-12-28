@@ -55,7 +55,7 @@
 .header__item--search{
     height: 40px;
     margin-top: 16px;
-    width: 250px;
+    width: 40%;
 }
 .color{
     background-color:  rgb(125, 168, 125);
@@ -67,7 +67,7 @@
     margin-left: 20px;
 }
 .header__item-search{
-    width: 250px;
+    width: 40%;
     height: 40px;
     border-radius: 3px;
     border-color: var(--white-color--);
@@ -91,18 +91,17 @@
 /* danh muc*/
 .header_danhmuC{
     text-decoration: none;
-    
-    
 }
 .danhmuc-theloai{
     position: absolute;
     background-color:  rgb(125, 168, 125);
-    width: 600px;
-    margin-top: 8px;
+    width: 30%;
+    margin-top: 5px;
     margin-left: 26px;
     animation: hienthi ease-out 0.2s;
     transform-origin: 10% top;
     display: none;
+    border-radius: 6px;
 }
 .item_loaidanhmuc{
     height: 40px;
@@ -119,6 +118,7 @@
 .danhmuc-list{
     list-style: none;
     border-left: 0px;
+
 }
 .danhmuc-list li{
     border-bottom: 1px solid rgb(154, 184, 154);
@@ -126,7 +126,7 @@
 }
 .item_dm{
     border-left: 0;
-    width: 180px;
+    width: 80%;
     display:inline-flex;
     text-align: center;
 }
@@ -150,9 +150,6 @@
 .theloai_list:hover .danhmuc-theloai{
     display:  block;
 }
-.theloai{
-    margin-left: 170.5px;
-}
 .anhnen{
     height: 60px;
     background-image: linear-gradient(0, rgba(182, 225, 240, 0.5), rgba(11, 100, 74, 0.5));
@@ -165,13 +162,7 @@
     background-size: contain;
     
 }
-/*đăng nhập - đăng ký*/
-.dk{
-    display: none;
-}
-.dn{
-    display: none ;
-}
+
 /*phần thân*/
 .header__decu{
     width: 80%;
@@ -210,6 +201,7 @@
 }
 .header-topthinhhanh-item-link{
     text-decoration: none;
+    width: 100%;
 }
 .header-topthinhhanh{
     width: 370px;
@@ -226,6 +218,7 @@
     font-size: 2rem;
     height: 30px;
     text-align: center;
+    width: 50%;
 }
 .vach{
     margin-top: 12px;
@@ -233,12 +226,7 @@
 .dangkytaikhoan{
     margin-top: 3px;
 }
-.dangkytaikhoan:focus ~ .dk .lopphu{
-    display: block;
-}
-.dangnhaptaikhoan:focus ~ .dn .lopphu{
-    display: none;
-}
+
 .list-sach{
     width: 80%;
     margin-left:10% ;
@@ -325,4 +313,8 @@
     width: 100%;
     height: 50px;
     background-color: rgb(19, 110, 85);
+}
+.top1thinhhanh{
+    width: 60%;
+    height: 40%;
 }

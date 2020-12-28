@@ -1,0 +1,128 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="./read.css">
+</head>
+<body>
+	<div class="app">
+    <div class="grid">
+        <header class="header">
+        
+                <nav class="nav">
+                    <a class="nav-link" href="">Trang chủ</a>
+                    <a class="nav-link" href="">Sản phẩm</a>
+                    <a class="nav-link" href="">Liên hệ</a>
+                </nav>
+                <div class="search">
+                    <img src="https://metruyenchu.com/images/logo-domain.png?0bfa68e6c6142e0d2f25301f37aaaec2" alt="logo" class="search-logo">
+                    <div data-v-4fa7f100="" method="post" class="header__search-form search--input">
+                    <input data-v-4fa7f100="" type="text" name="q" placeholder="Tìm kiếm" class="form-control border-primary" style="height: 30px;">
+                    <i class="fas fa-search search--item"></i>   
+                </div>
+        </header>
+                        <div class="chuong--link">
+                            <i class="chuong--item"><i class="fas fa-angle-double-left chuong--icon"></i></i>
+                            <i class="chuong--item"><i class="fas fa-angle-double-right chuong--icon"></i> </i>
+                        </div>
+                        <div class="h1 mb-4 font-weight-normal nh-read__title"> Chương 1: Mở đầu một tòa đạo quan đổ nát </div>
+                        <ul class="list-unstyled d-flex align-items-center flex-wrap">
+                            <li class="d-flex mr-4 mb-1"><h1 class="fz-body font-weight-normal m-0">
+                                <a href="https://metruyenchu.com/truyen/ben-ngoai-truyen-ba-luc" class="text-inherit d-flex align-items-center">
+                                    <i class="nh-icon icon-book mr-2 title--item">
+                                        </i><span style="color: #333;">Bên Ngoài Truyền Bá Lúc</span>  </a></h1></li>
+                                        <div class="noidung">(thế giới song song, đơn thuần hư cấu. Bản tác phẩm giữ vững chính xác giá trị quan, không nên bắt chước không đứng đắn hành vi. )<br>
+                                            <br>Trời xanh mây trắng, thanh sơn lục thủy, còn có Thanh Phong thổi Tà Dương <br>
+                                            <br>Ninh Phi nằm ở trên cỏ, nhìn chân trời mây cuộn mây tan, ngược lại cũng có vài phần dễ dàng cùng thích ý.<br>
+                                            <br>Sư phụ hắn đã đi rồi ba ngày rồi, lúc đi liền lưu lại một phong thư, thuyết là mình muốn dạo chơi thiên hạ, từ hôm nay trở đi, Ninh Phi chính là Thanh Phong quan Quan Chủ.<br>
+                                            <br>"Thí cái dạo chơi thiên hạ, rõ ràng là bỏ gánh không làm." Ninh Phi nhìn thấy tin sau, tức miệng mắng to.<br>
+                                            <br>Thanh Phong quan tổng cộng liền 2 người đạo sĩ, cái này Quan Chủ không quan chủ, một chút dùng không có.<br>
+                                            <br>Dựa theo hắn lời của sư phụ thuyết, lúc trước hắn vẫn phó Quan Chủ, nhưng mà còn chưa phải là cái làm việc mệnh.<br>
+                                            <br>Thanh Phong quan ở vào Tần Sơn dãy núi, Tần Sơn dãy núi rất lớn, nhìn không thấy cuối, trong đó linh linh tán tán cũng ở không ít gia đình.<br>
+                                            <br>Ninh Phi từ nhỏ đã cuộc sống ở Đạo Quan, sinh hoạt cũng coi như quy luật.<br>
+                                            <br>Mỗi ngày sáu giờ thức dậy, nhật tụng sớm môn học kinh, sau đó chính là làm việc vặt, tu thân tập võ, buổi tối môn học, chu nhi phục thủy.<br>
+                                            <br>Bất quá sư phụ của hắn có một chút rất phúc hậu, đó chính là rất coi trọng hắn văn hóa giáo dục.<br>
+                                            <br>Đến thích hợp tuổi tác, Ninh Phi liền ở trên núi giúp đỡ người nghèo tiểu học đi học. Hắn từ nhỏ người mặc đạo phục, trong núi nhân đều thân thiết gọi hắn "Tiểu Đạo Sĩ" .<br>
+                                            <br>Hắn rất thông minh, thành tích rất tốt, một ít đến chi dạy sinh viên giáo sư thường thường khen hắn.<br>
+                                            <br>Hơn nữa Ninh Phi từ nhỏ đã dung mạo rất thanh tú, có mấy cái xinh đẹp nữ lão sư còn muốn dẫn hắn đi bên ngoài sinh hoạt.<br>
+                                            <br>Đương nhiên, hắn cự tuyệt.<br>
+                                            <br>Dựa theo hắn lời của sư phụ thuyết, ngươi là Thanh Phong quan thứ một trăm ba mươi tám đại đơn truyền, ngươi đi rồi, Đạo Quan truyền thừa làm sao bây giờ?<br>
+                                            <br>Ninh Phi nhìn khối này tàn phá sân, rơi xuống tường da, nứt ra khe hở tường viện . Lúc ấy cảm giác mình trên người trách nhiệm trọng đại.<br>
+                                            <br>Sau đó, THCS, trung học đệ nhị cấp<br>
+                                            <br>Bằng vào thiên phú cùng ưu dị thành tích, hắn thi đậu kinh đô một khu nhà trọng điểm đại học, cũng coi là ở bên ngoài tiêu sái một đoạn thời gian.<br>
+                                            <br>Bây giờ, hắn đại học mới vừa tốt nghiệp, liền bị sư phụ gọi về Thanh Phong quan, cũng thành Thanh Phong quan Quan Chủ.<br>
+                                            <br>" Ừ, thời gian ngược lại cũng thích ý, bất quá luôn cảm thấy thiếu đi một chút gì?" Ninh Phi chặt chặt miệng, nói.<br>
+                                            <br>Bản thân hắn rất thích loại này dễ dàng cuộc sống nhàn nhã.<br>
+                                            <br>Nơi này non xanh nước biếc, tự cung tự cấp, cách xa thành phố huyên náo, không có lạnh như băng thép Jarnvid cho người áp lực lớn như vậy.<br>
+                                            <br>Chính là cảm giác, thật giống như thiếu một điểm thú vui?<br>
+                                            <br>"Đinh!"<br>
+                                            <br>"Kiểm tra đến kí chủ thân thể trạng thái bình thường, có mở ra hay không bên ngoài truyền trực tiếp hệ thống?"<br>
+                                            <br>Đang lúc ấy thì, Ninh Phi trong đầu vang lên một cái thanh âm.<br>
+                                            <br>Hệ thống?<br>
+                                            <br>Ninh Phi thần sắc xông lên vẻ kinh ngạc.<br>
+                                            <br>Đồ chơi này thật tồn tại?<br>
+                                            <br>Võng Văn hắn cũng không ít nhìn, tự nhiên biết rõ hệ thống là cái gì.<br>
+                                            <br>"Mở ra!"<br>
+                                            <br>Ninh Phi dĩ nhiên lựa chọn mở ra.<br>
+                                            <br>"Đinh! Bên ngoài truyền trực tiếp hệ thống đã mở ra, đang ở quét xem kí chủ tin tức ."<br>
+                                            <br>"Số liệu sinh thành trung."<br>
+                                            <br>"Kí chủ Ninh Phi "<br>
+                                            <br>"Lực lượng 13(người bình thường trung bình giá trị 10 ) "<br>
+                                            <br>"Bén nhạy 13(người bình thường trung bình giá trị 10 ) "<br>
+                                            <br>"Sức chịu đựng 12(người bình thường trung bình giá trị 10 ) "<br>
+                                            <br>"Trước mặt nhân khí giá trị 0 "<br>
+                                            <br>"Kỹ năng vô."<br>
+                                            <br>Lực lượng, bén nhạy, sức chịu đựng đều so với người bình thường mạnh hơn một chút, cùng hắn từ nhỏ đã đúc luyện có liên quan.<br>
+                                            <br>Nhân khí, kỹ năng khối này 2 cái tin tức, ngược lại đơn giản thô bạo.<br>
+                                            <br>Có chút ý tứ.<br>
+                                            <br>"Đinh! Khen thưởng kí chủ tân thủ gói quà lớn một phần, có hay không sử dụng?" Hệ thống thanh âm một lần nữa vang lên.<br>
+                                            <br>Tân thủ gói quà lớn?<br>
+                                            <br>Quả nhiên xuất hiện!<br>
+                                            <br>Có hệ thống nên có tân thủ gói quà lớn, bên trong đều như vậy viết.<br>
+                                            <br>"Sử dụng!" Ninh Phi bình tĩnh nói.<br>
+                                            <br>"Đinh! Chúc mừng kí chủ đạt được vật phẩm truyền trực tiếp đạo cụ. Truyền trực tiếp đạo cụ bao hàm điện thoại di động một bộ, trí năng máy bay không người một máy (năng lượng mặt trời sạc điện ), điện thoại di động chi giá một cái, hộp điều khiển ti vi một cái."<br>
+                                            <br>Hệ thống thanh âm một lần nữa vang lên.<br>
+                                            <br>Tiếp đó, những thứ này đạo cụ đều rơi xuống ở Ninh Phi trước mặt của.<br>
+                                            <br>Điện thoại di động là Huawei mới nhất khoản, đại khái 1 vạn 3 ngàn khối trái phải, so với hắn bây giờ dùng ngàn nguyên máy còn mạnh hơn nhiều.<br>
+                                            <br>Không có cách nào hắn quả thật, nghèo rớt dái a .<br>
+                                            <br>Máy bay không người toàn thân màu đen, có bốn cái cánh máy bay, kim loại cảm nhận rất rõ ràng, Ninh Phi cầm lên ở trong tay cân nhắc, phát hiện cái này máy bay không người dị thường chìm.<br>
+                                            <br>Cũng là cao cấp hàng.<br>
+                                            <br>Máy bay không người phía dưới nạm một máy máy quay phim, Ninh Phi không nghiên cứu qua quay phim, bất quá cũng cảm giác được khối này ống kính sợ rằng không tiện nghi.<br>
+                                            <br>"Hệ thống, trừ đó ra, ngươi còn có cái gì dùng? Ta truyền trực tiếp có thể thu được cái gì?" Ninh Phi lại hỏi.<br>
+                                            <br>"Bẩm kí chủ, kí chủ thông qua truyền trực tiếp đạt được nhân khí giá trị, sau đó có thể tiến hành rút số. Rút số chia làm Bạch Ngân, Hoàng Kim, Bạc Kim, Kim Cương cùng với thần cấp rút số, phân biệt cần phải tiêu hao 1 ngàn, 1 vạn, 10 vạn, 100 vạn, 1000 vạn nhân khí giá trị."<br>
+                                            <br>"Rút số có thể đạt được kỹ năng và đạo cụ."<br>
+                                            <br>Hệ thống trả lời.<br>
+                                            <br>"Quả nhiên là rút số." Ninh Phi tâm lý âm thầm trầm ngâm, hệ thống không phải là làm cái này chứ sao.<br>
+                                            <br>Sau đó, Ninh Phi mở điện thoại di động lên nhìn một chút, phát hiện bên trong đã hạ hảo một cái đấu điểu truyền trực tiếp sân thượng. Hắn mở ra vào xem, phát hiện ngay cả truyền trực tiếp tài khoản đều ghi danh tốt lắm.<br>
+                                            <br>Số phòng 999 999.<br>
+                                            <br>6 cái 9.<br>
+                                            <br>Ninh Phi thần sắc xông lên một vệt ngạc nhiên.<br>
+                                            <br>9 là số chi cực, là thiên địa lớn cân nhắc!<br>
+                                            <br>Hệ thống này lại cho mình ghi danh một cái lợi hại như vậy tài khoản?<br>
+                                            <br>Đấu điểu truyền trực tiếp quan phương cũng có thể đồng ý?<br>
+                                            <br>Đương nhiên, đây không phải là hắn suy tính, nếu truyền trực tiếp phần mềm và bình đài đều có, tiếp theo chính là truyền trực tiếp rồi.<br>
+                                            <br>Hắn lại lắc qua lắc lại rồi mấy cái máy bay không người, mở ra chốt mở điện, sau đó dùng hộp điều khiển từ xa điều khiển, máy bay không người liền lung la lung lay bay.<br>
+                                            <br>Máy bay không người có một cái "Tự động đi theo" chức năng, Ninh Phi trực tiếp lựa chọn để cho tự động đi theo, cũng tiết kiệm chính mình thao tác phiền toái.<br>
+                                            <br>Tiếp đó, hắn lại đem điện thoại di động nhấc lên, nắm truyền trực tiếp hậu trường điều chỉnh xong.<br>
+                                            <br>Hắn thao tác mấy cái, phát hiện mình là có thể hoán đổi hình ảnh.<br>
+                                            <br>Chính là điện thoại di động hình ảnh cùng máy bay không người hình ảnh tùy thời có thể hoán đổi.<br>
+                                            <br>Như vậy, vừa có thể bảo đảm hắn đặc tả, thỉnh thoảng cũng có thể mang đến toàn cảnh, thuộc về cao cấp vô cùng truyền trực tiếp phương thức.<br>
+                                            <br>"Hô!" Ninh Phi hít sâu một hơi.<br>
+                                            <br>Vạn sự đã sẵn sàng, chỉ thiếu mở màn chiếu!<br>
+                                            <br>Nghĩ đến chỗ này, hắn đưa ngón tay ra, nhấn bắt đầu truyền trực tiếp nút ấn.<br>
+                                            <br>Nam chính cơ trí, điềm đạm, cân não, hãy đến với <a href="https://vtruyen.com/truyen/huyen-luc" target="_blank">
+                                                <strong class="text-muted">Huyền Lục</strong></a> để cảm nhận lại chất tu tiên cổ điển. </div>
+                                            
+            </div>
+        </div>                     
+    </div>    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+</body>
+</html>
