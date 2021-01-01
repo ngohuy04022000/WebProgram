@@ -10,16 +10,16 @@ import beans.sach;
 
 public class DBUtils {
 	public static List<sach> listSach(Connection conn) throws SQLException {
-        String sql = "Select * from sach";
+        String sql = "Select * from CuonSach";
  
         PreparedStatement pstm = conn.prepareStatement(sql);
         ResultSet rs = pstm.executeQuery();
         List<sach> list = new ArrayList<sach>();
         while (rs.next()) {
-            int masach = rs.getInt("masach");
-            String linkbia = rs.getString("linkbia");
-            String tensach = rs.getString("tensach");
-            String chitiet = rs.getString("chitiet");
+            int masach = rs.getInt("MaSach");
+            String linkbia = rs.getString("LinkBia");
+            String tensach = rs.getString("TenSach");
+            String chitiet = rs.getString("ChiTiet");
             sach s = new sach();
             s.setmasach(masach);
             s.setlinkbia(linkbia);

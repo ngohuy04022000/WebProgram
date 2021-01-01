@@ -49,7 +49,7 @@ public class SachListServlet extends HttpServlet {
          
         // Forward sang /WEB-INF/views/productListView.jsp
         RequestDispatcher dispatcher = request.getServletContext()
-                .getRequestDispatcher("/WEB-INF/views/sachListView.jsp");
+                .getRequestDispatcher("WEB-INF/views/sachListView.jsp");
         dispatcher.forward(request, response);
 	}
 
