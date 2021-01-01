@@ -1,0 +1,73 @@
+@charset "UTF-8";
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+}
+*{
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    box-sizing: border-box;
+}
+.grid{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    
+}
+.app{
+    background-color: rgb(229, 211, 186);
+}
+.search{
+    display: inline-flex;
+}
+.search-logo{
+    height: 70px;
+    width: 220px;
+}
+.nav-link{
+    font-size: 2rem;
+    color: rgb(38, 37, 71);
+}
+.header__search-form{
+    display: inline-flex;
+    width: 30%;
+}
+.search{
+    width: 100%;
+}
+.search--item:hover{
+    color: rgb(101, 101, 214);
+}
+.search--item{
+    font-size: 2.2rem;
+    padding: 5px;
+    color: rgb(34, 34, 145);;
+}
+.search--input{
+    margin-left: 3%;
+    margin-top: 15px;
+}
+.chuong--link{
+    display: inline-flex;
+}
+.chuong--item{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-right: 50%;
+}
+.chuong--icon{
+    font-size: 4rem;
+}
+.title--item{
+    color: rgb(12, 12, 143);
+}
+.noidung{
+    font-size: 2rem;
+    color: var(--text-color);
+}
