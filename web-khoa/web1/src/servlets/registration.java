@@ -4,16 +4,15 @@ import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 @WebServlet(urlPatterns = {"/registration"})
-public class registration {
+public class registration extends HttpServlet{
 private static final long serialVersionUID = 1L;
     
-    /**
+    /**ServletRequest
      * @see HttpServlet#HttpServlet()
      */
     public registration() {
@@ -27,11 +26,6 @@ private static final long serialVersionUID = 1L;
 		// TODO Auto-generated method stub
 		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/registration.jsp");
 	       dispatcher.forward(request, response); 
-	}
-
-	private ServletRequest getServletContext() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

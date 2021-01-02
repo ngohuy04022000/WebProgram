@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet(urlPatterns = {"/login"})
-public class login {
+public class login extends HttpServlet{
 	private static final long serialVersionUID = 1L;
     
     /**
@@ -32,10 +31,6 @@ public class login {
 	       dispatcher.forward(request, response); 
 	}
 
-	private ServletRequest getServletContext() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
