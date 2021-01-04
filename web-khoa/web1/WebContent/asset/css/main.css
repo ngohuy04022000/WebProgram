@@ -256,14 +256,15 @@
 }
 
 .anhkia-sach{
-    height: 150px;
-    width: 100px;
-    margin-top: -65px;
+    height: 75px;
+    width: 50px;
+    margin-top: -25px;
     border-radius: 4px;
     border: 2px solid #5c8465;
 }
 .tensach{
-    font-size: 3rem;
+    font-size: 2.6rem;
+	margin-left: 10%;
 }
 .sach-item:hover{
     background-color:  #98d8a6;
@@ -271,4 +272,8 @@
 }
 .sach-hover:hover{
     color: #fafafa;
+}
+.top1thinhhanh{
+    width: 60%;
+    height: 40%;
 }

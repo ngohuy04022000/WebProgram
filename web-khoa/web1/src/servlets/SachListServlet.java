@@ -3,6 +3,7 @@ package servlets;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -13,6 +14,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import beans.sach;
+import beans.user;
+import conn.DBLogin;
 import conn.DBConnection;
 import utils.DBUtils;
 import utils.MyUtils;
@@ -39,18 +42,37 @@ public class SachListServlet extends HttpServlet {
 		Connection conn = MyUtils.getStoredConnection(request);
         String errorString = null;
         List<sach> list = null;
+        List<user> List_user=null;
+        List<user> List_user1=new ArrayList<user>();
         try {
             list = DBUtils.listSach(conn);
         } catch (SQLException e) {
             e.printStackTrace();
             errorString = e.getMessage();
         }
-       request.setAttribute("sachList", list);
+        try {
+        	List_user = DBUtils.listlogin(conn);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            errorString = e.getMessage();
+        }
+        String UserName= DBLogin.getName();
+        for( user u:List_user)
+        {
+        	String DBusername = u.getTaikhoan();
+        	if (DBusername.equals(UserName)) {
+				System.out.println("get user successfully");
+				List_user1.add(u);
+			}
+        }
+        
+        request.setAttribute("sachList", list);
+        request.setAttribute("user", List_user1);
          
         // Forward sang /WEB-INF/views/productListView.jsp
         RequestDispatcher dispatcher = request.getServletContext()
-        		 .getRequestDispatcher("/WEB-INF/views/login.jsp");
-//        		 .getRequestDispatcher("/WEB-INF/views/home.jsp");
+//        		 .getRequestDispatcher("/WEB-INF/views/login.jsp");
+        		 .getRequestDispatcher("/WEB-INF/views/home.jsp");
         dispatcher.forward(request, response);
 	}
 

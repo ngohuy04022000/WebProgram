@@ -11,6 +11,27 @@
 <body>
 	<script>
         function checkForm(){
+        	if(document.form.name.value=="")
+            {
+                 alert("Vui lòng nhập họ và tên!");
+                 document.form.name.focus();
+                 return false;
+
+            }
+            if(document.form.address.value=="")
+            {
+                 alert("Vui lòng nhập địa chỉ của bạn!");
+                 document.form.address.focus();
+                 return false;
+
+            }
+            if(document.form.email.value=="")
+            {
+                 alert("Vui lòng nhập tài khoản Email của bạn!");
+                 document.form.email.focus();
+                 return false;
+
+            }
             if(document.form.taikhoan.value=="")
             {
                  alert("Vui lòng nhập tài khoản!");
@@ -33,8 +54,14 @@
         }
     </script>
    
-    <form class="box" name="form" action="" method="post">
+    <form class="box" name="form" action="registrationcheck" method="post">
         <h2 class="title">Đăng ký</h2>
+        <h4 class="input-title">Họ và tên</h4>
+        <input type="text" name="name" placeholder="Họ và tên"/>
+        <h4 class="input-title">Địa chỉ</h4>
+        <input type="text" name="address" placeholder="Địa chỉ"/>
+        <h4 class="input-title">Email</h4>
+        <input type="text" name="email" placeholder="Email"/>
         <h4 class="input-title">Tài khoản</h4>
         <input type="text" name="taikhoan" placeholder="Tài khoản"/>
         <h4 class="input-title">Mật khẩu</h4>

@@ -7,6 +7,7 @@
 <title>Truyenhay.vn</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="./asset/css/read.css">
+<link rel="stylesheet" href="./asset/fonts/fontawesome-free-5.15.1-web/css/all.min.css">
 </head>
 <body>
 	<div class="app">
@@ -14,21 +15,18 @@
         <header class="header">
         
                 <nav class="nav">
-                    <a class="nav-link" href="">Trang chủ</a>
-                    <a class="nav-link" href="">Sản phẩm</a>
-                    <a class="nav-link" href="">Liên hệ</a>
+                    <a class="nav-link" href="sachListView">Trang chủ</a>
+                    <a class="nav-link" href="sachListView">Sản phẩm</a>
+                    <a class="nav-link" href="sachListView">Liên hệ</a>
                 </nav>
                 <div class="search">
-                    <img src="https://metruyenchu.com/images/logo-domain.png?0bfa68e6c6142e0d2f25301f37aaaec2" alt="logo" class="search-logo">
-                    <div data-v-4fa7f100="" method="post" class="header__search-form search--input">
-                    <input data-v-4fa7f100="" type="text" name="q" placeholder="Tìm kiếm" class="form-control border-primary" style="height: 30px;">
-                    <i class="fas fa-search search--item"></i>   
+                    <img src="https://metruyenchu.com/images/logo-domain.png?0bfa68e6c6142e0d2f25301f37aaaec2" alt="logo" class="search-logo">  
                 </div>
         </header>
                         <div class="chuong--link">
-                            <i class="chuong--item"><i class="fas fa-angle-double-left chuong--icon"></i></i>
-                            <i class="chuong--item"><i class="fas fa-angle-double-right chuong--icon"></i> </i>
-                        </div>
+					         <a href="sachListView" class="chuong--item"><i class="fas fa-angle-double-left chuong--icon"></i></a>
+					         <a href="benngoaitruyenbaluc_c2" class="chuong--item"><i class="fas fa-angle-double-right chuong--icon"></i></a>
+					      </div>
                         <div class="h1 mb-4 font-weight-normal nh-read__title"> Chương 1: Mở đầu một tòa đạo quan đổ nát </div>
                         <ul class="list-unstyled d-flex align-items-center flex-wrap">
                             <li class="d-flex mr-4 mb-1"><h1 class="fz-body font-weight-normal m-0">

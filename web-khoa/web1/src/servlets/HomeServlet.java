@@ -29,8 +29,7 @@ public class HomeServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/sachListView.jsp");
-//		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/benngoaitruyenbaluc-c1.jsp");
-		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/login.jsp");
+		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/benngoaitruyenbaluc-c1.jsp");
 	       dispatcher.forward(request, response); 
 	}
 

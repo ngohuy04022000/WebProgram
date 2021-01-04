@@ -26,9 +26,9 @@
                                     <div class="danhmuc-theloai">
                                         <header class="header_danhmuc">
                                                 <ul class="danhmuc-list">
-                                                    <li class="item_dm"><a href="" class="item_loaidanhmuc">Truyện mới</a></li>
-                                                    <li class="item_dm"><a href="" class="item_loaidanhmuc">Truyện hoàn thành</a></li>
-                                                    <li class="item_dm"><a href="" class="item_loaidanhmuc">Lọc truyện</a></li>
+                                                    <li class="item_dm"><a href="theloai_truyenmoi" class="item_loaidanhmuc">Truyện mới</a></li>
+                                                    <li class="item_dm"><a href="theloai_truyenhoanthanh" class="item_loaidanhmuc">Truyện hoàn thành</a></li>
+                                                    <li class="item_dm"><a href="theloai_truyenuathich" class="item_loaidanhmuc">Truyện ưa thích</a></li>
                                                 </ul>
                                         </header>
                                     </div>
@@ -36,15 +36,18 @@
                             </div> 
                         </ul>
                         <ul class="header__login-search">
-                                <input class="header__item-search" type="text" name="txtKeyword" id="txtKeyword" value="" placeholder="Tên truyện hoặc tác giả" class="form-control" autocomplete="off">
-                                <a href="" class="icon-search"><i class="fas fa-search search"></i></a>
                                 <li class="header__item-login">
-                                    <a href="" class="item dangnhaptaikhoan" onclick="login()"><span>
-                                        <i class="far fa-user-circle"></i>
-                                        Đăng nhập</span>
+                                    <a href="" class="item dangnhaptaikhoan" onclick="login()">
+                                    
+                                    	<span>
+                                        	<i class="far fa-user-circle"></i>
+                                        	<c:forEach items="${user}" var="user1">
+                                        	${user1.hoten}</c:forEach>
+                                        </span>
+                                     
                                     </a></li>
                                 <span class="header__item-login vach">|</span>
-                                <li class="header__item-login"><a href=""class="item dangkytaikhoan"><span style="width : 100%;" >Đăng ký</span></a></li>
+                                <li class="header__item-login"><a href="logout"class="item dangkytaikhoan"><span style="width : 100%;" >Thoát</span></a></li>
                         </ul>
                         
                     </nav>
@@ -56,11 +59,19 @@
                             <div class="btv_decu">
                                 <span class="header-title">BTV ĐỀ CỬ</span>
                                 <div class="btv_decu-img">
-                                <img src="./asset/img/cam-huong-ly-poster-20200706-200x300.jpg" alt="" class="top1thinhhanh">
+                                <img src="https://static.cdnno.com/poster/chu-gioi-tan-the-online/300.jpg?1585206156" alt="" class="top1thinhhanh">
                                 </div>
-                                <h2 class ="btv_decu-tua">Tobi</h2>
+                                <h2 class ="btv_decu-tua">Chư giới tận thế Online</h2>
                                 <span class="btv_decu-chitiet">
-                                    Giới thiệu vắn tắt: quyển sách lại danh<< đại sư huynh nói xong không đánh nữ nhân, kết quả lạt thủ lồi hoa>>,
+                                    Tận thế của chư giới đã tới.
+
+									Ma Vương Trật Tự thu gặt lấy từng mạng sống của chúng sinh.
+									
+									Ở trong bóng tối đầy tuyệt vọng này,
+									
+									Có một người tránh thoát thời không, trở lại thế giới sụp đổ trước đó, quyết tâm cải biến vận mệnh trong quá khứ.
+									
+									Nhưng theo thời gian dần dần trôi qua, hắn dần dần phát hiện rằng tận thế cũng không phải là đơn giản như vậy...
                                 </span>
                             </div>
                              <div class="header-topthinhhanh">
@@ -69,9 +80,9 @@
                                 	<table border="1" cellpadding="5" cellspacing="1", style="width: 100%;border: 0px;">
                                         <c:forEach items="${sachList}" var="sach">
                                         <tr class="sach-item">
-                                            <td  style="height: 150px;width: 13%; border: 0px;"><div class="header-topthinhhanh-item"><a href="${sach.chitiet}" class="header-topthinhhanh-item-link"><img src="./asset/img/cam-huong-ly-poster-20200706-200x300.jpg" alt="" class="anhkia-sach" style="border: 0px;"></a></div></td>
-                                            <td  style="height: 150px;width: 50%; border: 0px;"><div class="header-topthinhhanh-item"><a href="${sach.chitiet}" class="header-topthinhhanh-item-link"><span class="tensach sach-hover" >${sach.tensach}</span></a></div></td>
-                                            <td  style="height: 150px;width: 50%; border: 0px;"><div class="header-topthinhhanh-item"><a href="${sach.chitiet}" class="header-topthinhhanh-item-link"><span class="tensach sach-hover" >${sach.chitiet}</span></a></div></td>
+                                            <td  style="height: 75px;width: 13%; border: 0px;"><div class="header-topthinhhanh-item"><a href="${sach.chitiet}" class="header-topthinhhanh-item-link"><img src="${sach.linkbia}" alt="" class="anhkia-sach" style="border: 0px;"></a></div></td>
+                                            <td  style="height: 75px;width: 80%; border: 0px;"><div class="header-topthinhhanh-item"><a href="${sach.chitiet}" class="header-topthinhhanh-item-link"><span class="tensach sach-hover" >${sach.tensach}</span></a></div></td>
+                                           <!-- <td  style="height: 75px;width: 5%; border: 0px;"><div class="header-topthinhhanh-item"><a href="${sach.chitiet}" class="header-topthinhhanh-item-link"><span class="tensach sach-hover" >${sach.chitiet}</span></a></div></td>-->
                                             </tr>
                                         </c:forEach>
                                     </table>
