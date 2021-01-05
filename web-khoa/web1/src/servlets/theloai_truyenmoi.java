@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import beans.sach;
+import conn.DBLogin;
 import utils.DBUtils;
 import utils.MyUtils;
 
@@ -53,8 +54,10 @@ public class theloai_truyenmoi extends HttpServlet {
 					list_truyensach.add(s);
 				}
 	        }
-	       request.setAttribute("sachList", list_truyensach);
-	         
+	        if(DBLogin.getLogin()==true)
+	        {
+	        	request.setAttribute("sachList", list_truyensach);
+	        }
 	        // Forward sang /WEB-INF/views/productListView.jsp
 	        RequestDispatcher dispatcher = request.getServletContext()
 //	        		 .getRequestDispatcher("/WEB-INF/views/login.jsp");

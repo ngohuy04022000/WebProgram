@@ -126,4 +126,8 @@ public class DBLogin extends HttpServlet{
 	public static boolean getLogin() {
 		return login;
 	}
+	public static void setLogin(boolean dn )
+	{
+		login = dn;
+	}
 }

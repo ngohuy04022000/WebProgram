@@ -40,10 +40,11 @@
                                 <li class="header__item-login">
                                     <a href="" class="item dangnhaptaikhoan" onclick="login()"><span>
                                         <i class="far fa-user-circle"></i>
-                                        Đăng nhập</span>
+                                        <c:forEach items="${user}" var="user1">
+                                        	${user1.hoten}</c:forEach></span>
                                     </a></li>
                                 <span class="header__item-login vach">|</span>
-                                <li class="header__item-login"><a href=""class="item dangkytaikhoan"><span style="width : 100%;" >Đăng ký</span></a></li>
+                                <li class="header__item-login"><a href="login"class="item dangkytaikhoan"><span style="width : 100%;" >Đăng nhập</span></a></li>
                         </ul>
                         
                     </nav>
@@ -60,7 +61,6 @@
                                         <tr class="sach-item">
                                             <td  style="height: 75px;width: 13%; border: 0px;"><div class="header-topthinhhanh-item"><a href="${sach.chitiet}" class="header-topthinhhanh-item-link"><img src="./asset/img/cam-huong-ly-poster-20200706-200x300.jpg" alt="" class="anhkia-sach" style="border: 0px;"></a></div></td>
                                             <td  style="height: 75px;width: 80%; border: 0px;"><div class="header-topthinhhanh-item"><a href="${sach.chitiet}" class="header-topthinhhanh-item-link"><span class="tensach sach-hover" >${sach.tensach}</span></a></div></td>
-                                            <td  style="height: 75px;width: 5%; border: 0px;"><div class="header-topthinhhanh-item"><a href="${sach.chitiet}" class="header-topthinhhanh-item-link"><span class="tensach sach-hover" >${sach.chitiet}</span></a></div></td>
                                             </tr>
                                         </c:forEach>
                                     </table>

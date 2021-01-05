@@ -39,7 +39,10 @@ private static final long serialVersionUID = 1L;
 		doPost(request, response);
 		HttpSession session=request.getSession(false);
 		session.invalidate();
+		DBLogin.setLogin(false);
 		response.sendRedirect("login");
+		
+		
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

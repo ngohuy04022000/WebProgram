@@ -65,10 +65,11 @@ public class SachListServlet extends HttpServlet {
 				List_user1.add(u);
 			}
         }
-        
-        request.setAttribute("sachList", list);
-        request.setAttribute("user", List_user1);
-         
+        if(DBLogin.getLogin()==true)
+        {
+        	request.setAttribute("sachList", list);
+        	request.setAttribute("user", List_user1);
+        }
         // Forward sang /WEB-INF/views/productListView.jsp
         RequestDispatcher dispatcher = request.getServletContext()
 //        		 .getRequestDispatcher("/WEB-INF/views/login.jsp");
