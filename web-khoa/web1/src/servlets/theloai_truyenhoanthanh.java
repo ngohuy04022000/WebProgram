@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import beans.sach;
+import beans.user;
 import conn.DBLogin;
 import utils.DBUtils;
 import utils.MyUtils;
@@ -54,9 +55,27 @@ public class theloai_truyenhoanthanh extends HttpServlet {
 				list_truyensach.add(s);
 			}
         }
+        String UserName= DBLogin.getName();
+        List<user> List_user1=new ArrayList<user>();
+        List<user> List_user=null;
+        try {
+        	List_user = DBUtils.listlogin(conn);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            errorString = e.getMessage();
+        }
+        for( user u:List_user)
+        {
+        	String DBusername = u.getTaikhoan();
+        	if (DBusername.equals(UserName)) {
+				System.out.println("get user successfully");
+				List_user1.add(u);
+			}
+        }
         if(DBLogin.getLogin()==true)
         {
         	request.setAttribute("sachList", list_truyensach);
+        	request.setAttribute("user", List_user1);
         }
         // Forward sang /WEB-INF/views/productListView.jsp
         RequestDispatcher dispatcher = request.getServletContext()

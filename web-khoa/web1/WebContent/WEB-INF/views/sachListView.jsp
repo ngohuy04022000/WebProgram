@@ -44,7 +44,7 @@
                                         	${user1.hoten}</c:forEach></span>
                                     </a></li>
                                 <span class="header__item-login vach">|</span>
-                                <li class="header__item-login"><a href="login"class="item dangkytaikhoan"><span style="width : 100%;" >Đăng nhập</span></a></li>
+                                <li class="header__item-login"><a href="logout"class="item dangkytaikhoan"><span style="width : 100%;" >Thoát</span></a></li>
                         </ul>
                         
                     </nav>

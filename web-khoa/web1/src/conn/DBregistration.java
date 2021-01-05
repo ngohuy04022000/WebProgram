@@ -45,27 +45,12 @@ public class DBregistration extends HttpServlet{
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String username1=request.getParameter("taikhoan");
-		String password1=request.getParameter("matkhau");
-//		request.setAttribute(username,"user");
-//		request.setAttribute(password,"pass");
-//		request.getAttribute("user");
-//		boolean registration =false;
 		Connection conn = MyUtils.getStoredConnection(request);
-//		String manguoidungStr = (String) request.getParameter("manguoidung");
 		String hoten = new String( request.getParameter("name").getBytes("ISO-8859-1"),"UTF-8");
 		String diachi = new String( request.getParameter("address").getBytes("ISO-8859-1"),"UTF-8");
         String email = new String( request.getParameter("email").getBytes("ISO-8859-1"),"UTF-8");
         String taikhoan = (String) request.getParameter("taikhoan");
         String matkhau = (String) request.getParameter("matkhau");
-//        String maquyenStr = (String) request.getParameter("maquyen");Integer.parseInt(maquyenStr)
-        
-        
-//		try {
-//			manguoidung = Integer.parseInt(manguoidungStr);
-//		} catch (Exception e) {
-//			
-//		}
 		int quyen =1;
 		int manguoidung = 1;
 		 List<user> list = null;
