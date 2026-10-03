@@ -12,64 +12,84 @@ import beans.user;
 public class DBUtils {
 	public static List<sach> listSach(Connection conn) throws SQLException {
         String sql = "Select * from CuonSach";
- 
-        PreparedStatement pstm = conn.prepareStatement(sql);
-        ResultSet rs = pstm.executeQuery();
+        try (PreparedStatement pstm = conn.prepareStatement(sql);
+             ResultSet rs = pstm.executeQuery()) {
+            return readSach(rs);
+        }
+    }
+	// Lấy danh sách sách theo thể loại (truyenmoi, truyenhoanthanh, truyenuathich).
+	public static List<sach> listSachByTheLoai(Connection conn, String theloai) throws SQLException {
+        String sql = "Select * from CuonSach where TheLoai = ?";
+        try (PreparedStatement pstm = conn.prepareStatement(sql)) {
+            pstm.setString(1, theloai);
+            try (ResultSet rs = pstm.executeQuery()) {
+                return readSach(rs);
+            }
+        }
+    }
+	private static List<sach> readSach(ResultSet rs) throws SQLException {
         List<sach> list = new ArrayList<sach>();
         while (rs.next()) {
-            int masach = rs.getInt("MaSach");
-            String linkbia = rs.getString("LinkBia");
-            String tensach = rs.getString("TenSach");
-            String chitiet = rs.getString("ChiTiet");
-            String theloai = rs.getString("TheLoai");
             sach s = new sach();
-            s.setmasach(masach);
-            s.setlinkbia(linkbia);
-            s.settensach(tensach);
-            s.setchitiet(chitiet);
-            s.settheloai(theloai);
+            s.setmasach(rs.getInt("MaSach"));
+            s.setlinkbia(rs.getString("LinkBia"));
+            s.settensach(rs.getString("TenSach"));
+            s.setchitiet(rs.getString("ChiTiet"));
+            s.settheloai(rs.getString("TheLoai"));
             list.add(s);
         }
         return list;
     }
-	public static List<user> listlogin(Connection conn) throws SQLException {
-        String sql = "Select * from NguoiDung";
- 
-        PreparedStatement pstm = conn.prepareStatement(sql);
-        ResultSet rs = pstm.executeQuery();
-        List<user> list = new ArrayList<user>();
-        while (rs.next()) {
-            int manguoidung = rs.getInt("MaNguoiDung");
-            String hoten = rs.getNString("HoTen");
-            String diachi = rs.getNString("DiaChi");
-            String email = rs.getNString("Email");
-            String taikhoan = rs.getNString("TaiKhoan");
-            String matkhau = rs.getNString("MatKhau");
-            int quyen = rs.getInt("MaQuyen");
-            user s = new user();
-            s.setManguoidung(manguoidung);
-            s.setHoten(hoten);
-            s.setDiachi(diachi);
-            s.setEmail(email);
-            s.setTaikhoan(taikhoan);
-            s.setMatkhau(matkhau);
-            s.setMaquyen(quyen);
-            list.add(s);
+	// Tìm người dùng theo tài khoản + mật khẩu, trả về null nếu sai.
+	public static user findUser(Connection conn, String taikhoan, String matkhau) throws SQLException {
+        String sql = "Select * from NguoiDung where TaiKhoan = ? and MatKhau = ?";
+        try (PreparedStatement pstm = conn.prepareStatement(sql)) {
+            pstm.setNString(1, taikhoan);
+            pstm.setNString(2, matkhau);
+            try (ResultSet rs = pstm.executeQuery()) {
+                return rs.next() ? readUser(rs) : null;
+            }
         }
-        return list;
+    }
+	public static boolean existsTaiKhoan(Connection conn, String taikhoan) throws SQLException {
+        String sql = "Select 1 from NguoiDung where TaiKhoan = ?";
+        try (PreparedStatement pstm = conn.prepareStatement(sql)) {
+            pstm.setNString(1, taikhoan);
+            try (ResultSet rs = pstm.executeQuery()) {
+                return rs.next();
+            }
+        }
+    }
+	public static int nextMaNguoiDung(Connection conn) throws SQLException {
+        String sql = "Select ISNULL(MAX(MaNguoiDung), 0) + 1 from NguoiDung";
+        try (PreparedStatement pstm = conn.prepareStatement(sql);
+             ResultSet rs = pstm.executeQuery()) {
+            rs.next();
+            return rs.getInt(1);
+        }
+    }
+	private static user readUser(ResultSet rs) throws SQLException {
+        user s = new user();
+        s.setManguoidung(rs.getInt("MaNguoiDung"));
+        s.setHoten(rs.getNString("HoTen"));
+        s.setDiachi(rs.getNString("DiaChi"));
+        s.setEmail(rs.getNString("Email"));
+        s.setTaikhoan(rs.getNString("TaiKhoan"));
+        s.setMatkhau(rs.getNString("MatKhau"));
+        s.setMaquyen(rs.getInt("MaQuyen"));
+        return s;
     }
 	public static void insertUser(Connection conn, user u) throws SQLException {
-        String sql = "Insert into NguoiDung values(?,?,?,?,?,?,?)";
- 
-        PreparedStatement pstm = conn.prepareStatement(sql);
-        
-        pstm.setInt(1, u.getManguoidung());
-        pstm.setNString(2, u.getHoten());
-        pstm.setNString(3, u.getDiachi());
-        pstm.setNString(4, u.getEmail());
-        pstm.setNString(5, u.getTaikhoan());
-        pstm.setNString(6, u.getMatkhau());
-        pstm.setInt(7, u.getMaquyen());
-        pstm.executeUpdate();
+        String sql = "Insert into NguoiDung (MaNguoiDung, HoTen, DiaChi, Email, TaiKhoan, MatKhau, MaQuyen) values(?,?,?,?,?,?,?)";
+        try (PreparedStatement pstm = conn.prepareStatement(sql)) {
+            pstm.setInt(1, u.getManguoidung());
+            pstm.setNString(2, u.getHoten());
+            pstm.setNString(3, u.getDiachi());
+            pstm.setNString(4, u.getEmail());
+            pstm.setNString(5, u.getTaikhoan());
+            pstm.setNString(6, u.getMatkhau());
+            pstm.setInt(7, u.getMaquyen());
+            pstm.executeUpdate();
+        }
 	}
 }

@@ -13,7 +13,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
-	<form class="box" name="form" action="sach-theloai" method="post">
 	<div class="app">
             <header class="header">
                 <div class="grid"> 
@@ -38,10 +37,11 @@
                         </ul>
                         <ul class="header__login-search">
                                 <li class="header__item-login">
-                                    <a href="" class="item dangnhaptaikhoan" onclick="login()"><span>
-                                        <i class="far fa-user-circle"></i>
-                                        <c:forEach items="${user}" var="user1">
-                                        	${user1.hoten}</c:forEach></span>
+                                    <a href="sachListView" class="item dangnhaptaikhoan">
+                                    	<span>
+                                        	<i class="far fa-user-circle"></i>
+                                        	<c:out value="${loginedUser.hoten}"/>
+                                        </span>
                                     </a></li>
                                 <span class="header__item-login vach">|</span>
                                 <li class="header__item-login"><a href="logout"class="item dangkytaikhoan"><span style="width : 100%;" >Thoát</span></a></li>
@@ -56,11 +56,11 @@
                              <div class="header-topthinhhanh">
                                 <span class="header-title">Thư viện</span>
                                 <div class="header-topthinhhanh-list">
-                                	<table border="1" cellpadding="5" cellspacing="1", style="width: 100%;border: 0px;">
+                                	<table border="1" cellpadding="5" cellspacing="1" style="width: 100%;border: 0px;">
                                         <c:forEach items="${sachList}" var="sach">
                                         <tr class="sach-item">
-                                            <td  style="height: 75px;width: 13%; border: 0px;"><div class="header-topthinhhanh-item"><a href="${sach.chitiet}" class="header-topthinhhanh-item-link"><img src="./asset/img/cam-huong-ly-poster-20200706-200x300.jpg" alt="" class="anhkia-sach" style="border: 0px;"></a></div></td>
-                                            <td  style="height: 75px;width: 80%; border: 0px;"><div class="header-topthinhhanh-item"><a href="${sach.chitiet}" class="header-topthinhhanh-item-link"><span class="tensach sach-hover" >${sach.tensach}</span></a></div></td>
+                                            <td  style="height: 75px;width: 13%; border: 0px;"><div class="header-topthinhhanh-item"><a href="<c:out value='${sach.chitiet}'/>" class="header-topthinhhanh-item-link"><img src="./asset/img/cam-huong-ly-poster-20200706-200x300.jpg" alt="" class="anhkia-sach" style="border: 0px;"></a></div></td>
+                                            <td  style="height: 75px;width: 80%; border: 0px;"><div class="header-topthinhhanh-item"><a href="<c:out value='${sach.chitiet}'/>" class="header-topthinhhanh-item-link"><span class="tensach sach-hover" ><c:out value="${sach.tensach}"/></span></a></div></td>
                                             </tr>
                                         </c:forEach>
                                     </table>
@@ -87,6 +87,5 @@
                 </div>
             </header>
         </div>
-    </form>
 </body>
 </html>

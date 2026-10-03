@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 	<link rel="stylesheet" href="./asset/css/login.css">
-    <script src="login.js"></script>
 <title>Đăng ký</title>
 </head>
 <body>
@@ -56,6 +56,12 @@
    
     <form class="box" name="form" action="registrationcheck" method="post">
         <h2 class="title">Đăng ký</h2>
+        <c:choose>
+            <c:when test="${param.error == 'exists'}"><p style="color: #ff6b6b;">Tài khoản đã tồn tại, vui lòng chọn tài khoản khác!</p></c:when>
+            <c:when test="${param.error == 'password'}"><p style="color: #ff6b6b;">Mật khẩu nhập lại không trùng khớp!</p></c:when>
+            <c:when test="${param.error == 'empty'}"><p style="color: #ff6b6b;">Vui lòng nhập đầy đủ thông tin!</p></c:when>
+            <c:when test="${not empty param.error}"><p style="color: #ff6b6b;">Đăng ký thất bại, vui lòng thử lại!</p></c:when>
+        </c:choose>
         <h4 class="input-title">Họ và tên</h4>
         <input type="text" name="name" placeholder="Họ và tên"/>
         <h4 class="input-title">Địa chỉ</h4>

@@ -3,15 +3,15 @@ package utils;
 import java.sql.*;
 
 import javax.servlet.*;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import beans.user;
 
 public class MyUtils {
 	public static final String ATT_NAME_CONNECTION = "ATTRIBUTE_FOR_CONNECTION";
-	 
-    private static final String ATT_NAME_USER_NAME = "ATTRIBUTE_FOR_STORE_USER_NAME_IN_COOKIE";
+	// Tên attribute lưu người dùng đã đăng nhập trong session (JSP dùng ${loginedUser}).
+	public static final String ATT_NAME_LOGINED_USER = "loginedUser";
+
     public static void storeConnection(ServletRequest request, Connection conn) {
         request.setAttribute(ATT_NAME_CONNECTION, conn);
     }
@@ -19,38 +19,15 @@ public class MyUtils {
         Connection conn = (Connection) request.getAttribute(ATT_NAME_CONNECTION);
         return conn;
     }
- /*
-    public static void storeLoginedUser(HttpSession session, UserAccount loginedUser) {
-        session.setAttribute("loginedUser", loginedUser);
+    // Lưu trạng thái đăng nhập theo từng session, không dùng biến static
+    // (biến static dùng chung cho mọi người truy cập).
+    public static void storeLoginedUser(HttpSession session, user loginedUser) {
+        session.setAttribute(ATT_NAME_LOGINED_USER, loginedUser);
     }
-    public static UserAccount getLoginedUser(HttpSession session) {
-        UserAccount loginedUser = (UserAccount) session.getAttribute("loginedUser");
-        return loginedUser;
-    }
-
-    public static void storeUserCookie(HttpServletResponse response, UserAccount user) {
-        System.out.println("Store user cookie");
-        Cookie cookieUserName = new Cookie(ATT_NAME_USER_NAME, user.getUserName());
-        cookieUserName.setMaxAge(24 * 60 * 60);
-        response.addCookie(cookieUserName);
-    }
- 
-    public static String getUserNameInCookie(HttpServletRequest request) {
-        Cookie[] cookies = request.getCookies();
-        if (cookies != null) {
-            for (Cookie cookie : cookies) {
-                if (ATT_NAME_USER_NAME.equals(cookie.getName())) {
-                    return cookie.getValue();
-                }
-            }
+    public static user getLoginedUser(HttpSession session) {
+        if (session == null) {
+            return null;
         }
-        return null;
+        return (user) session.getAttribute(ATT_NAME_LOGINED_USER);
     }
- 
-    public static void deleteUserCookie(HttpServletResponse response) {
-        Cookie cookieUserName = new Cookie(ATT_NAME_USER_NAME, null);
-        cookieUserName.setMaxAge(0);
-        response.addCookie(cookieUserName);
-    }
- */
 }

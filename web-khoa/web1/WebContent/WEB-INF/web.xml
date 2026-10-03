@@ -4,4 +4,19 @@
   <welcome-file-list>
     <welcome-file>login</welcome-file>
   </welcome-file-list>
+  <!-- Thứ tự filter: kiểm tra đăng nhập trước, sau đó mới mở kết nối DB -->
+  <filter-mapping>
+    <filter-name>AuthFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>JDBCFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <session-config>
+    <session-timeout>30</session-timeout>
+    <cookie-config>
+      <http-only>true</http-only>
+    </cookie-config>
+  </session-config>
 </web-app>

@@ -23,7 +23,7 @@
                </div>
          </header>
          <div class="chuong--link">
-			<a href="home" class="chuong--item"><i class="fas fa-angle-double-left chuong--icon"></i></a>
+			<a href="benngoaitruyenbaluc_c1" class="chuong--item"><i class="fas fa-angle-double-left chuong--icon"></i></a>
 			<a href="sachListView" class="chuong--item"><i class="fas fa-angle-double-right chuong--icon"></i></a>
 		</div>
          <div class="h1 mb-4 font-weight-normal nh-read__title"> Chương 2: Ló mặt! Nhan giá trị hoạt náo viên!            </div>

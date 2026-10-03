@@ -37,14 +37,11 @@
                         </ul>
                         <ul class="header__login-search">
                                 <li class="header__item-login">
-                                    <a href="" class="item dangnhaptaikhoan" onclick="login()">
-                                    
+                                    <a href="sachListView" class="item dangnhaptaikhoan">
                                     	<span>
                                         	<i class="far fa-user-circle"></i>
-                                        	<c:forEach items="${user}" var="user1">
-                                        	${user1.hoten}</c:forEach>
+                                        	<c:out value="${loginedUser.hoten}"/>
                                         </span>
-                                     
                                     </a></li>
                                 <span class="header__item-login vach">|</span>
                                 <li class="header__item-login"><a href="logout"class="item dangkytaikhoan"><span style="width : 100%;" >Thoát</span></a></li>
@@ -77,12 +74,11 @@
                              <div class="header-topthinhhanh">
                                 <span class="header-title">Thư viện</span>
                                 <div class="header-topthinhhanh-list">
-                                	<table border="1" cellpadding="5" cellspacing="1", style="width: 100%;border: 0px;">
+                                	<table border="1" cellpadding="5" cellspacing="1" style="width: 100%;border: 0px;">
                                         <c:forEach items="${sachList}" var="sach">
                                         <tr class="sach-item">
-                                            <td  style="height: 75px;width: 13%; border: 0px;"><div class="header-topthinhhanh-item"><a href="${sach.chitiet}" class="header-topthinhhanh-item-link"><img src="${sach.linkbia}" alt="" class="anhkia-sach" style="border: 0px;"></a></div></td>
-                                            <td  style="height: 75px;width: 80%; border: 0px;"><div class="header-topthinhhanh-item"><a href="${sach.chitiet}" class="header-topthinhhanh-item-link"><span class="tensach sach-hover" >${sach.tensach}</span></a></div></td>
-                                           <!-- <td  style="height: 75px;width: 5%; border: 0px;"><div class="header-topthinhhanh-item"><a href="${sach.chitiet}" class="header-topthinhhanh-item-link"><span class="tensach sach-hover" >${sach.chitiet}</span></a></div></td>-->
+                                            <td  style="height: 75px;width: 13%; border: 0px;"><div class="header-topthinhhanh-item"><a href="<c:out value='${sach.chitiet}'/>" class="header-topthinhhanh-item-link"><img src="<c:out value='${sach.linkbia}'/>" alt="" class="anhkia-sach" style="border: 0px;"></a></div></td>
+                                            <td  style="height: 75px;width: 80%; border: 0px;"><div class="header-topthinhhanh-item"><a href="<c:out value='${sach.chitiet}'/>" class="header-topthinhhanh-item-link"><span class="tensach sach-hover" ><c:out value="${sach.tensach}"/></span></a></div></td>
                                             </tr>
                                         </c:forEach>
                                     </table>

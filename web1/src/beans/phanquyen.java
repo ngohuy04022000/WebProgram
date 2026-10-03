@@ -1,6 +1,5 @@
 package beans;
 
-import com.oracle.wls.shaded.org.apache.xpath.operations.String;
 
 public class phanquyen {
 	private int maquyen;

@@ -6,7 +6,6 @@
 <meta charset="UTF-8">
 <title>Đăng nhập</title>
 <link rel="stylesheet" href="./asset/css/login.css">
-<script src="login.js"></script>
 </head>
 <body>
 	<script>
